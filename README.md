@@ -137,3 +137,19 @@ This project is licensed under the <b>GNU GPLv3+</b> license, a copy of which ca
 Users looking for support should file an issue in the official [GoldenDict issue tracker](https://github.com/goldendict/goldendict/issues),
 or even better: submit a [pull request](https://github.com/goldendict/goldendict/pulls) if you have a fix available.
 General questions should be asked on the [official GoldenDict forum](http://goldendict.org/forum/).
+
+# XuanAnh
+
+## git add official remote
+
+git remote add official https://github.com/goldendict/goldendict.git
+
+## git pull official remote
+
+git pull official
+
+## build
+
+qmake
+make clean
+make 

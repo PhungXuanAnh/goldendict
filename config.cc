@@ -1296,7 +1296,8 @@ void saveGroup( Group const & data, QDomElement & group )
 
 void save( Class const & c ) THROW_SPEC( exError )
 {
-  QFile configFile( getConfigFileName() + ".tmp" );
+  // QFile configFile( getConfigFileName() + ".tmp" );
+  QFile configFile( getConfigFileName());
 
   if ( !configFile.open( QFile::WriteOnly ) )
     throw exCantWriteConfigFile();
@@ -2226,7 +2227,7 @@ void save( Class const & c ) THROW_SPEC( exError )
 
   configFile.close();
 
-  renameAtomically( configFile.fileName(), getConfigFileName() );
+  // renameAtomically( configFile.fileName(), getConfigFileName() );
 }
 
 QString getConfigFileName()

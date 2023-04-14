@@ -1123,6 +1123,7 @@ void MainWindow::commitData()
     // Save any changes in last chosen groups etc
     try
     {
+      gdDebug( "aaaaaaaaaaaaaaaaaa 1 : Maybe we don't need to save config when closing.." );
       Config::save( cfg );
     }
     catch( std::exception & e )
@@ -2144,7 +2145,7 @@ void MainWindow::editDictionaries( unsigned editDictionaryGroup )
     cfg = newCfg;
 
     updateGroupList();
-
+    gdDebug( "aaaaaaaaaaaaaaaaaa 2" );
     Config::save( cfg );
 
     updateSuggestionList();
@@ -2293,6 +2294,7 @@ void MainWindow::editPreferences()
 
     ui.fullTextSearchAction->setEnabled( cfg.preferences.fts.enabled );
 
+    gdDebug( "aaaaaaaaaaaaaaaaaa 3" );
     Config::save( cfg );
   }
 
@@ -3315,6 +3317,7 @@ void MainWindow::latestReleaseReplyReady()
 
     prepareNewReleaseChecks();
 
+    gdDebug( "aaaaaaaaaaaaaaaaaa 4" );
     Config::save( cfg );
 
     GD_DPRINTF( "Program version's check successful, current version is %ls\n",
@@ -3342,6 +3345,8 @@ void MainWindow::latestReleaseReplyReady()
     if ( msg.clickedButton() == skip )
     {
       cfg.skippedRelease = latestVersion;
+
+      gdDebug( "aaaaaaaaaaaaaaaaaa 5" );
       Config::save( cfg );
     }
   }
