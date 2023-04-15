@@ -153,3 +153,7 @@ git pull official
 qmake
 make clean
 make 
+
+## commits
+
+don't create new config file    `9a32ba63ce2b73a867d61e1fad1bfffcfdac9c05`
